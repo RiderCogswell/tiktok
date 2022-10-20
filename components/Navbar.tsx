@@ -7,13 +7,17 @@ import { AiOutlineLogout } from 'react-icons/ai';
 import { BiSearch } from 'react-icons/bi';
 import { IoMdAdd } from 'react-icons/io';
 
+import Logo from '../utils/tiktok.png'
+
 export const Navbar = () => {
   return (
-    <div>
-      <Link>
-        <div>
+    <div className='w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4'>
+      <Link href='/'>
+        <div className='w-[100px] md:w-[170px]'>
           <Image
             className='cursor-pointer'
+            src={Logo}
+            alt='Tiktik'
           />
         </div>
       </Link>

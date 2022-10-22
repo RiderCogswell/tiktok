@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "briktok-backend/schemas/comment.js", "briktok-backend/schemas/post.js", "briktok-backend/schemas/postedBy.js", "briktok-backend/schemas/schema.js", "briktok-backend/schemas/user.js"],
   "exclude": ["node_modules"]
 }

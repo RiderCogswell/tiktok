@@ -6,7 +6,10 @@ import { topics } from '../utils/constants'
 
 
 const Discover = () => {
-  const activeTopicStyle = 'xl:border-2 hover:bg-primary xl:border-[#F51997] px-3 py-2 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-black';
+  const router = useRouter();
+  const { query } = router; // not destructuring for sake of using topic as an iteratble already
+
+  const activeTopicStyle = 'xl:border-2 hover:bg-primary xl:border-[#F51997] px-3 py-2 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-[#F51997]';
   const topicStyle = 'xl:border-2 hover:bg-primary xl:border-gray-300 px-3 py-2 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-black';
 
   return (
@@ -17,7 +20,7 @@ const Discover = () => {
       <div className='flex gap-3 flex-wrap'>
         {topics.map((topic) => (
           <Link href={`/?topic=${topic.name}`} key={topic.name}>
-            <div className={topicStyle}>
+            <div className={ query.topic === topic.name ? activeTopicStyle : topicStyle}>
               <span className='font-bold text-2xl xl:text-md'>
                 {topic.icon}
               </span>

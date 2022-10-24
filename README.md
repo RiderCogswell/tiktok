@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TikTok
 
-## Getting Started
+## Description
+Professional TikTok clone built with Next.js, React, Sanity.io, TypeScript, and Tailwind! Login to like, post, or comment on videos!
 
-First, run the development server:
+## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributors](#contributors)
+  - [License](#license)
+  - [Questions](#questions)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Installation
+[For help with Sanity, visit the documentation here!](https://www.sanity.io/docs/overview-introduction) 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
+In order to test out the application, clone this starter code into your code editor, open your terminal/command line, and from the root of the application run "npm run dev", follow the prompts, and enjoy! Or if you just want a little taste, click [here]() to visit the deployed application!
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Contributors
+* [Rider Cogswell](https://github.com/RiderCogswell)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## License
+This project is licensed under the MIT License 
 
-## Learn More
+For more information click [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Questions
+[GitHub](https://github.com/RiderCogswell)  
+[Email Me!](mailto:ridercogswell@gmail.com)

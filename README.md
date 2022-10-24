@@ -1,4 +1,4 @@
-# TikTok
+# TikTok for Shmucks
 
 ## Description
 Professional TikTok clone built with Next.js, React, Sanity.io, TypeScript, and Tailwind! Login to like, post, or comment on videos!

@@ -18,7 +18,7 @@ export const Footer = () => {
       <List items={footerList1} />
       <List items={footerList2} />
       <List items={footerList3} />
-      <p className='text-gray-200 text-sm mt-5'>2022 Rider&apos;s TikTok</p>
+      <p className='text-gray-200 text-sm mt-5'>&copy;2022 Rider&apos;s TikTok</p>
     </div>
   )
 }

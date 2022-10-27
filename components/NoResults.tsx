@@ -1,6 +1,10 @@
 import React from 'react'
 
-export const NoResults = ({ text }) => {
+interface IProps {
+  text: string;
+}
+
+export const NoResults = ({ text }: IProps) => {
   return (
     <div>NoResults</div>
   )

@@ -15,7 +15,7 @@ interface IProps {
 export const VideoCard: NextPage<IProps> = ({ post }) => {
   const [isHover, setIsHover] = useState(false);
   const [isMuted, setIsMuted] = useState(false);  
-  const [first, setfirst] = useState(second)
+  const [isPlaying, setIsPlaying] = useState(false)
   return (
     
     <div className='flex flex-col border-b-2 border-gray-200 pb-6'>
@@ -68,7 +68,15 @@ export const VideoCard: NextPage<IProps> = ({ post }) => {
 
           {isHover && (
             <div>
-
+              {isPlaying ? (
+                <button>
+                  <BsFillPauseFill className='text-black text-2xl lg:text-4xl'/>
+                </button>
+              ) : (
+                <button>
+                  <BsFillPlayFill className='text-black text-2xl lg:text-4xl'/>
+                </button>
+              )}
             </div>
           )}
         </div>

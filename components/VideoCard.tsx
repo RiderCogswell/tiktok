@@ -16,6 +16,18 @@ export const VideoCard: NextPage<IProps> = ({ post }) => {
   const [isHover, setIsHover] = useState(false);
   const [isMuted, setIsMuted] = useState(false);  
   const [isPlaying, setIsPlaying] = useState(false)
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const onVideoPress = () => {
+    if (isPlaying) {
+      videoRef?.current?.pause();
+      setIsPlaying(false);
+    } else {
+      videoRef?.current?.play();
+      setIsPlaying(true);
+    }
+  };
   return (
     
     <div className='flex flex-col border-b-2 border-gray-200 pb-6'>
@@ -61,6 +73,7 @@ export const VideoCard: NextPage<IProps> = ({ post }) => {
           <Link href='/'>
             <video 
               loop
+              ref={videoRef}
               className='lg:w[600px] h-[300px] md:h-[400px] lg:h-[530px] w-[200px] rounded-2xl cursor-pointer border-gray-100'
               src={post.video.asset.url}>
             </video>
@@ -69,12 +82,25 @@ export const VideoCard: NextPage<IProps> = ({ post }) => {
           {isHover && (
             <div>
               {isPlaying ? (
-                <button>
+                <button onClick={onVideoPress}>
                   <BsFillPauseFill className='text-black text-2xl lg:text-4xl'/>
                 </button>
               ) : (
-                <button>
+                <button onClick={onVideoPress}>
                   <BsFillPlayFill className='text-black text-2xl lg:text-4xl'/>
+                </button>
+              )}
+              {isMuted ? (
+                <button onClick={
+                  () => {setIsMuted(false)}
+                }>
+                  <HiVolumeOff className='text-black text-2xl lg:text-4xl'/>
+                </button>
+              ) : (
+                <button onClick={
+                  () => {setIsMuted(true)}
+                }>
+                  <HiVolumeUp className='text-black text-2xl lg:text-4xl'/>
                 </button>
               )}
             </div>

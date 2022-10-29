@@ -14,7 +14,7 @@ export const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(true);
   const userProfile = false;
 
-  const normalLink = 'flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#F51997] rounded'
+  const normalLink = 'flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#FE2C55] rounded'
   
   return (
     <div>
@@ -48,7 +48,7 @@ export const Sidebar = () => {
                   clientId=''
                   render={(renderProps) => (
                     <button 
-                      className='cursor-pointer bg-white text-lg text-[#F51997] border-[1px] border-[#F51997] font-semibold px-6 py-3 w-full rounded-md mt-3 hover:text-white hover:bg-[#F51997]'
+                      className='cursor-pointer bg-white text-lg text-[#FE2C55] border-[1px] border-[#FE2C55] font-semibold px-6 py-3 w-full rounded-md mt-3 hover:bg-[#FE2C550f] active:bg-[#FE2C5529]'
                       onClick={renderProps.onClick}
                       disabled={renderProps.disabled}
                     >

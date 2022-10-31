@@ -103,11 +103,13 @@ const Upload = () => {
               value='' 
               onChange={() => {}} 
               className='border-2 border-gray-200 rounded p-2 outline-none text-md'
+              placeholder='Add a caption...'
             />
             <label className='text-md font-medium'>Choose a Category</label>
             <select 
               onChange={() => {}}
               className='outline-none border-2 border-gray-200 text-md capitalize lg:p-4 p-2 rounded cursor-pointer'
+              placeholder='Choose a category'
             >
               {topics.map((topic) => (
                 <option 
@@ -123,14 +125,14 @@ const Upload = () => {
               <button 
                 onClick={() => {}}
                 type='button'
-                className='border-gray-200 border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
+                className='border-gray-200 border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none hover:bg-primary hover:bg-opacity-25 active:bg-opacity-100'
               >
                 Discard
               </button>
               <button 
                 onClick={() => {}}
                 type='button'
-                className='bg-[#FE2C55] border-2 text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
+                className='bg-[#FE2C55] active:bg-[#fe2c56d4] border-2 text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
               >
                 Post
               </button>

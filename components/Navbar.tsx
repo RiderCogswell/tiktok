@@ -53,7 +53,7 @@ export const Navbar = () => {
               googleLogout();
               removeUser();
             }}>
-              <AiOutlineLogout color='red' fontSize={21} />
+              <AiOutlineLogout color='#FE2C55' fontSize={21} />
             </button>
           </div>
         ) : (

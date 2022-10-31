@@ -11,7 +11,7 @@ import { SanityAssetDocument } from '@sanity/client';
 const Upload = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [videoAsset, setvideoAsset] = useState<SanityAssetDocument | undefined>();
-  const [wrongFileType, setWrongFileType] = useState(false)
+  const [wrongFileType, setWrongFileType] = useState(false);
 
   const uploadVideo = async (e: any) => {
     const selectedFile = e.target.files[0];
@@ -47,7 +47,14 @@ const Upload = () => {
               <div>
                 {videoAsset ? (
                   <div>
+                    <video 
+                      src={videoAsset.url}
+                      loop 
+                      controls
+                      className='rounded-xl h-[450px] w-[400px] mt-16 bg-black'
+                    >
 
+                    </video>
                   </div>
                 ) : (
                   <label className='cursor-pointer'>
@@ -77,6 +84,11 @@ const Upload = () => {
                   </label>
                 )}
               </div>
+            )}
+            {wrongFileType && (
+              <p className='text-center text-xl text-red-400 font-semibold mt-4 w-[250px]'>
+                Please select another video
+              </p>
             )}
           </div>
         </div>

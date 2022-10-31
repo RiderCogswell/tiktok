@@ -10,7 +10,7 @@ const Discover = () => {
   const { query } = router; // not destructuring for sake of using topic as an iteratble already
 
   const activeTopicStyle = 'xl:border-2 hover:bg-[#FE2C550f] active:bg-[#FE2C5529] xl:border-[#FE2C55] px-3 py-2 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-[#FE2C55]';
-  const topicStyle = 'xl:border-2 hover:bg-primary hover:bg-opacity-75 active:bg-opacity-100 xl:border-gray-300 px-3 py-2 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-black';
+  const topicStyle = 'xl:border-2 hover:bg-primary hover:bg-opacity-25 active:bg-opacity-100 xl:border-gray-300 px-3 py-2 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-black';
 
   return (
     <div className='xl:border-b-2 xl:border-gray-200 pb-6'>

@@ -14,17 +14,10 @@ export const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(true);
   const userProfile = false;
 
-  const normalLink = 'flex items-center gap-3 hover:bg-primary hover:bg-opacity-75 active:bg-opacity-100 p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#FE2C55] rounded'
+  const normalLink = 'flex items-center gap-3 hover:bg-primary hover:bg-opacity-25 active:bg-opacity-100 p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#FE2C55] rounded'
   
   return (
     <div>
-      <div 
-        className='block xl:hidden m-2 ml-4 mt-3 text-xl'
-        onClick={() => setShowSidebar((prev) => !prev)}
-      >
-        {showSidebar ? <ImCancelCircle /> : <AiOutlineMenu />}
-      </div> 
-      {showSidebar && ( // shortcircuit
         <div className='xl:w-400 w-20 flex flex-col justify-start mb-10 border-r-2 border-gray-100 xl:border-0 p-3'>
           <div className='xl:border-b-2 border-gray-200 xl:pb-4'>
             <Link href='/'>
@@ -66,7 +59,6 @@ export const Sidebar = () => {
           <SuggestedAccounts />
           <Footer />
         </div>
-      )}
     </div>
   )
 }

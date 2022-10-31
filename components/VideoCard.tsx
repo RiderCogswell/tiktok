@@ -83,24 +83,24 @@ export const VideoCard: NextPage<IProps> = ({ post }) => {
             <div className='absolute bottom-6 cursor-pointer left-8 md:left-14 lg:left-0 flex gap-10 lg:justify-between w-[100px] md:w-[50px] p-3'>
               {isPlaying ? (
                 <button onClick={onVideoPress}>
-                  <BsFillPauseFill className='text-black text-2xl lg:text-4xl'/>
+                  <BsFillPauseFill className='text-white text-2xl lg:text-4xl'/>
                 </button>
               ) : (
                 <button onClick={onVideoPress}>
-                  <BsFillPlayFill className='text-black text-2xl lg:text-4xl'/>
+                  <BsFillPlayFill className='text-white text-2xl lg:text-4xl'/>
                 </button>
               )}
               {isMuted ? (
                 <button onClick={
                   () => {setIsMuted(false)}
                 }>
-                  <HiVolumeOff className='text-black text-2xl lg:text-4xl'/>
+                  <HiVolumeOff className='text-white text-2xl lg:text-4xl'/>
                 </button>
               ) : (
                 <button onClick={
                   () => {setIsMuted(true)}
                 }>
-                  <HiVolumeUp className='text-black text-2xl lg:text-4xl'/>
+                  <HiVolumeUp className='text-white text-2xl lg:text-4xl'/>
                 </button>
               )}
             </div>

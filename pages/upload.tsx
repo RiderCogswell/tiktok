@@ -13,6 +13,9 @@ const Upload = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [videoAsset, setvideoAsset] = useState<SanityAssetDocument | undefined>();
   const [wrongFileType, setWrongFileType] = useState(false);
+  const [caption, setCaption] = useState('');
+  const [category, setCategory] = useState(topics[0].name)
+  const [savingPost, setSavingPost] = useState(false)
 
   const uploadVideo = async (e: any) => {
     const selectedFile = e.target.files[0];
@@ -32,6 +35,12 @@ const Upload = () => {
       setWrongFileType(true);
     }
   };
+
+  const handlePost = async () => {
+    if (caption && videoAsset?._id && category) {
+      setSavingPost(true);
+    }
+  }
 
   return (
     <div className='flex h-full w-full absolute left-0 top-[60px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center'>
@@ -100,14 +109,14 @@ const Upload = () => {
             </label>
             <input 
               type="text" 
-              value='' 
-              onChange={() => {}} 
+              value={caption}
+              onChange={(e) => setCaption(e.target.value)} 
               className='border-2 border-gray-200 rounded p-2 outline-none text-md'
               placeholder='Add a caption...'
             />
             <label className='text-md font-medium'>Choose a Category</label>
             <select 
-              onChange={() => {}}
+              onChange={(e) => setCategory(e.target.value)}
               className='outline-none border-2 border-gray-200 text-md capitalize lg:p-4 p-2 rounded cursor-pointer'
               placeholder='Choose a category'
             >
@@ -130,7 +139,7 @@ const Upload = () => {
                 Discard
               </button>
               <button 
-                onClick={() => {}}
+                onClick={handlePost}
                 type='button'
                 className='bg-[#FE2C55] active:bg-[#fe2c56d4] border-2 text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
               >

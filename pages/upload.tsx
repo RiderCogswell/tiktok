@@ -17,6 +17,9 @@ const Upload = () => {
   const [category, setCategory] = useState(topics[0].name)
   const [savingPost, setSavingPost] = useState(false)
 
+  const { userProfile }: { userProfile: any } = useAuthStore();
+  const router = useRouter();
+
   const uploadVideo = async (e: any) => {
     const selectedFile = e.target.files[0];
     const fileTypes = ['video/mp4', 'video/webm', 'video/ogg'];
@@ -40,6 +43,28 @@ const Upload = () => {
     if (caption && videoAsset?._id && category) {
       setSavingPost(true);
     }
+
+    const document = {
+      _type: 'post',
+      caption,
+      video: {
+        _type: 'file',
+        asset: {
+          _type: 'reference',
+          _ref: videoAsset?._id,
+        }
+      },
+      userId: userProfile?._id,
+      postedBy: {
+        _type: 'postedBy',
+        _ref: userProfile?._id,
+      },
+      topic: category,
+    }
+
+    await axios.post('http://localhost:3000/api/post', document)
+
+    router.push('/');
   }
 
   return (

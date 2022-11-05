@@ -20,6 +20,16 @@ const Detail = ({ postDetails } : IProps) => {
 
   const videoRef = useRef<HTMLVideoElement>(null)
 
+  const onVideoClick = () => {
+    if (isPlaying) {
+      videoRef?.current?.pause()
+      setIsPlaying(false)
+    } else {
+      videoRef?.current?.play()
+      setIsPlaying(true)
+    }
+  }
+
   if (!post) return null;
 
   return (
@@ -35,7 +45,7 @@ const Detail = ({ postDetails } : IProps) => {
             <video 
               ref={videoRef}
               loop
-              onClick={() => {}}
+              onClick={onVideoClick}
               src={post.video.asset.url}
               className='cursor-pointer h-full'
             >
@@ -44,8 +54,8 @@ const Detail = ({ postDetails } : IProps) => {
           </div>
           <div>
             {!isPlaying && (
-              <button>
-                <BsFillPlayFill className='text-white text-6xl lg:text-8xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' />
+              <button onClick={onVideoClick}>
+                <BsFillPlayFill className='text-white text-6xl lg:text-8xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer' />
               </button>
             )}
           </div>

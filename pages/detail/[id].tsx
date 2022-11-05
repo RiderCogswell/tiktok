@@ -16,7 +16,7 @@ interface IProps {
 
 const Detail = ({ postDetails } : IProps) => {
   const [post, setPost] = useState(postDetails)
-  
+  const [isPlaying, setIsPlaying] = useState(false)
 
   const videoRef = useRef<HTMLVideoElement>(null)
 
@@ -29,18 +29,25 @@ const Detail = ({ postDetails } : IProps) => {
           <p>
             <MdOutlineCancel className='text-white text-[35px]' />
           </p>
-          <div className='relative'>
-            <div className='lg:h-[100vh] h-[60vh]'>
-              <video 
-                ref={videoRef}
-                loop
-                onClick={() => {}}
-                src={post.video.asset.url}
-                className='cursor-pointer h-full'
-              >
+        </div>
+        <div className='relative'>
+          <div className='lg:h-[100vh] h-[60vh]'>
+            <video 
+              ref={videoRef}
+              loop
+              onClick={() => {}}
+              src={post.video.asset.url}
+              className='cursor-pointer h-full'
+            >
 
-              </video>
-            </div>
+            </video>
+          </div>
+          <div>
+            {!isPlaying && (
+              <button>
+                <BsFillPlayFill className='text-white text-6xl lg:text-8xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' />
+              </button>
+            )}
           </div>
         </div>
       </div>

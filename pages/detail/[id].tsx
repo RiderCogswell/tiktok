@@ -8,9 +8,13 @@ import { BsFillPlayFill } from 'react-icons/bs'
 import { HiVolumeUp, HiVolumeOff } from 'react-icons/hi'
 import axios from 'axios'
 import { BASE_URL } from '../../utils'
+import { Video } from '../../types'
 
+interface IProps {
+  postDetails: Video
+}
 
-const Detail = () => {
+const Detail = ({ postDetails } : IProps) => {
   return (
     <div>
 

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const [id] = () => {
+const Detail = () => {
   return (
-    <div>[id]</div>
+    <div>Detail</div>
   )
 }
 

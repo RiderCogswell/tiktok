@@ -7,8 +7,12 @@ import { MdOutlineCancel } from 'react-icons/md'
 import { BsFillPlayFill } from 'react-icons/bs'
 import { HiVolumeUp, HiVolumeOff } from 'react-icons/hi'
 import axios from 'axios'
+
 import { BASE_URL } from '../../utils'
 import { Video } from '../../types'
+import useAuthStore from '../../store/authStore'
+import LikeButton from '../../components/LikeButton'
+import Comments from '../../components/Comments'
 
 interface IProps {
   postDetails: Video
@@ -21,6 +25,7 @@ const Detail = ({ postDetails } : IProps) => {
 
   const videoRef = useRef<HTMLVideoElement>(null)
   const router = useRouter();
+  const { userProfile } = useAuthStore()
 
   const onVideoClick = () => {
     if (isPlaying) {
@@ -40,6 +45,10 @@ const Detail = ({ postDetails } : IProps) => {
       videoRef.current.muted = isMuted;
     }
   }, [post, isMuted])
+
+  const handleLike = async (like: boolean) => {
+
+  }
   
 
   return (
@@ -121,6 +130,16 @@ const Detail = ({ postDetails } : IProps) => {
               </Link>
             </div>
           </div>
+          
+          <p className='px-10 text-lg text-gray-600 '>{post.caption}</p>
+
+          <div>
+            {userProfile && (
+              <LikeButton />
+            )}
+          </div>
+
+          <Comments />
         </div>
       </div>
     </div>

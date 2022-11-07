@@ -44,7 +44,7 @@ const Detail = ({ postDetails } : IProps) => {
 
   return (
     <div className='flex w-full absolute left-0 top-0 bg-white flex-wrap lg:flex-nowrap'>
-      <div className='relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-black'>
+      <div className='relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-blurred-img bg-cover bg-center'>
         <div className='absolute top-6 left-2 lg:left-6 flex gap-6 z-50'>
           <p className='cursor-pointer' onClick={() => router.back()}> 
             <MdOutlineCancel className='text-white text-[35px]' />
@@ -62,7 +62,7 @@ const Detail = ({ postDetails } : IProps) => {
 
             </video>
           </div>
-          <div className=' absolute top-[45%] left-[45%] cursor-pointer'>
+          <div className='absolute top-[45%] left-[45%] cursor-pointer'>
             {!isPlaying && (
               <button onClick={onVideoClick}>
                 <BsFillPlayFill className='text-white text-6xl lg:text-8xl' />

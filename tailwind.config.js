@@ -36,7 +36,7 @@ module.exports = {
       },
       backgroundImage: {
         'blurred-img':
-          "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsaaJ7s4lqcBF4IDROVPzrlL5fexcwRmDlnuEYQenWTt1DejFY5kmYDref2a0Hp2eE4aw&usqp=CAU')",
+          "url('https://www.123freevectors.com/ezoimgfmt/i2.wp.com/files.123freevectors.com/wp-content/original/110965-dark-color-blurred-background-vector.jpg?ezimgfmt=rs%3Adevice%2Frscb2-1&q=95&w=800')",
       },
     },
   },

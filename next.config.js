@@ -1,3 +1,5 @@
+import { gzip } from 'zlib'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -7,9 +9,10 @@ const nextConfig = {
       'i2-prod.walesonline.co.uk',
       'lh3.googleusercontent.com'
     ]
-  }
+  },
+  compress: gzip,
 }
 
-module.exports = nextConfig
+export default nextConfig
 
 // nextjs requires our paths to be declared before we can take things from cdn's

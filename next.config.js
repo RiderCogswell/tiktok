@@ -1,5 +1,3 @@
-import { gzip } from 'zlib'
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,

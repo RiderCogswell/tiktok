@@ -10,7 +10,7 @@ const nextConfig = {
       'lh3.googleusercontent.com'
     ]
   },
-  compress: gzip,
+  compress: true,
 }
 
 export default nextConfig

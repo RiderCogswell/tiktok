@@ -7,8 +7,7 @@ const nextConfig = {
       'i2-prod.walesonline.co.uk',
       'lh3.googleusercontent.com'
     ]
-  },
-  compress: true,
+  }
 }
 
 export default nextConfig

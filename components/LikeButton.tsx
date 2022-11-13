@@ -12,7 +12,7 @@ interface IProps {
 const LikeButton = ({ likes, handleLike, handleDislike }: IProps) => {
   const [liked, setLiked] = useState(false)
   const { userProfile }: any = useAuthStore()
-  let filterLikes = likes?.filter((like) => like._ref === userProfile?._id)
+  const filterLikes = likes?.filter((like) => like._ref === userProfile?._id)
 
   useEffect(() => {
     if (filterLikes?.length > 0) {
@@ -34,7 +34,7 @@ const LikeButton = ({ likes, handleLike, handleDislike }: IProps) => {
             <MdFavorite className='text-lg md:text-2xl' />
           </div>
         )}
-        <p className='text-md font-semibold'>{likes?.length || 0}</p>
+        <p className='text-md font-semibold'>{likes?.length | 0}</p>
       </div>
     </div>
   )

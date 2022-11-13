@@ -6,11 +6,24 @@ import { GoVerified } from 'react-icons/go'
 import useAuthStore from '../store/authStore'
 import { NoResults } from './NoResults'
 
-const Comments = () => {
+interface IProps {
+  isPosting: boolean;
+  comment: string;
+  setComment: () => void;
+  addComment: () => void;
+  comments: IComment[];
+}
+
+interface IComment {
+  comment: string;
+  length?: number;
+  _key: string;
+  postedBy: { _ref: string; _id: string }
+}
+
+const Comments = ({comment, setComment, addComment, isPosting, comments }: IProps) => {
   const { userProfile } = useAuthStore()
-  const comments = [];
-  const isPosting = false;
-  
+
   return (
     <div className='border-r-2 border-gray-200 pt-4 px-10 bg-[#f8f8f8] border-b-2 lg:pb-0 pb-[100px]'>
       <div className='overflow-scroll lg:h-[475px]'>

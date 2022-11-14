@@ -14,8 +14,6 @@ import useAuthStore from '../store/authStore';
 export const Navbar = () => {
   const { userProfile, addUser, removeUser } = useAuthStore();
 
-  
-
   return (
     <div className='w-full flex justify-between items-center border-b border-gray-200 py-2 px-4'>
       <Link href='/'>

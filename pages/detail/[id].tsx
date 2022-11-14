@@ -60,15 +60,19 @@ const Detail = ({ postDetails } : IProps) => {
     }
   }
   
-  const addComment = async (e: Event) => {
+  const addComment = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (userProfile && comment) { 
       setIsPosting(true)
-      const res = await axios.put(`BASE_URL/api/post/${post._id}`, {
+      const { data } = await axios.put(`${BASE_URL}/api/post/${post._id}`, {
         userId: userProfile._id,
         comment
       })
+
+      setPost({ ...post, comments: data.comments })
+      setComment('')
+      setIsPosting(false)
     }
   }
 

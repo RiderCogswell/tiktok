@@ -25,7 +25,7 @@ In order to test out the application, clone this starter code into your code edi
 ## License
 This project is licensed under the MIT License 
 
-For more information click [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+For more information click => [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Questions
 [GitHub](https://github.com/RiderCogswell)  

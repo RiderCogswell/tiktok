@@ -3,6 +3,8 @@
 ## Description
 Professional TikTok clone built with Next.js, React, Sanity.io, TypeScript, and Tailwind! Login to like, post, or comment on videos!
 
+UPDATE: Will be replacing Sanity backend with Flask ([Python](https://docs.python.org/3/)), and Gin ([Golang](https://go.dev/doc/))
+
 ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)

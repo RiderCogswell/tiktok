@@ -17,7 +17,7 @@ const SuggestedAccounts = () => {
       <p className='text-gray-500 font-semibold m-3 mt-4 hidden xl:block'>Suggested Accounts</p>
 
       <div>
-        {allUsers.slice(0, 6).map((user: User) => (
+        {allUsers.slice(0, 5).map((user: User) => (
           <Link href={`/profile/${user._id}`} key={user._id}>
             <div className='flex gap-3 hover:bg-primary hover:bg-opacity-50 active:bg-opacity-100 p-2 cursor-pointer font-semibold rounded'>
               <div className='w-8 h-8'>

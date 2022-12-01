@@ -1,39 +1,37 @@
-import { BsCode, BsEmojiSunglasses } from 'react-icons/bs';
-import { GiCakeSlice, GiGalaxy, GiLipstick } from 'react-icons/gi';
-import { FaPaw, FaMedal, FaGamepad } from 'react-icons/fa';
+import { SourceCode, MoodSmileBeam, DeviceGamepad2, Pizza, Medal, Paw, Flower, Confetti } from 'tabler-icons-react'
 
 export const topics = [
   {
     name: 'coding',
-    icon: <BsCode />,
+    icon: <SourceCode size={30} />,
   },
   {
     name: 'comedy',
-    icon: <BsEmojiSunglasses />,
+    icon: <MoodSmileBeam size={30} />,
   },
   {
     name: 'gaming',
-    icon: <FaGamepad />,
+    icon: <DeviceGamepad2 size={30} />,
   },
   {
     name: 'food',
-    icon: <GiCakeSlice />,
+    icon: <Pizza size={30} />,
   },
   {
     name: 'dance',
-    icon: <GiGalaxy />,
+    icon: <Confetti size={30} />,
   },
   {
     name: 'beauty',
-    icon: <GiLipstick />,
+    icon: <Flower size={30} />,
   },
   {
     name: 'animals',
-    icon: <FaPaw />,
+    icon: <Paw size={30} />,
   },
   {
     name: 'sports',
-    icon: <FaMedal />,
+    icon: <Medal size={30} />,
   },
 ];
 

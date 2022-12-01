@@ -3,8 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { GoogleLogin, googleLogout } from '@react-oauth/google';
 import { useRouter } from 'next/router';
-import { AiOutlineLogout } from 'react-icons/ai';
-import { BiSearch } from 'react-icons/bi';
+import { Logout, Search } from 'tabler-icons-react'
 import { IoMdAdd } from 'react-icons/io';
 
 import Logo from '../utils/tiktok.png'
@@ -37,14 +36,14 @@ export const Navbar = () => {
                 <span className='hidden md:block'>Upload</span>
               </button>
             </Link>
-            {userProfile.image && (
+            {userProfile?.image && (
               <Link href='/'>
                 <>
                   <Image 
                     width={40}
                     height={40}
                     className='rounded-full'
-                    src={userProfile.image}
+                    src={userProfile?.image}
                     alt='profile photo'
                   />
                 </>
@@ -54,7 +53,7 @@ export const Navbar = () => {
               googleLogout();
               removeUser();
             }}>
-              <AiOutlineLogout color='#FE2C55' fontSize={21} />
+              <Logout color='#FE2C55' fontSize={21} />
             </button>
           </div>
         ) : (

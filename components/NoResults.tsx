@@ -19,3 +19,5 @@ export const NoResults = ({ text }: IProps) => {
     </div>
   )
 }
+
+export default NoResults;

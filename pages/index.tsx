@@ -23,7 +23,7 @@ const Home = ({ videos }: IProps) => {
 }
 
 export const getServerSideProps = async () => {
-  const { data } = await axios.get(`http://localhost:3000/api/post`) // destructure data out and pass it through as video
+  const { data } = await axios.get(`/api/post`) // destructure data out and pass it through as video
 
   return {
     props: {

@@ -5,6 +5,9 @@ Professional TikTok clone built with Next.js, React, Sanity.io, TypeScript, and 
 
 UPDATE: Will be replacing Sanity backend with Flask - ([Python](https://docs.python.org/3/)), and Gin - ([Golang](https://go.dev/doc/)) respectively in their own repositories. (While Sanity is very easy, it's too slow for me 😔)
 
+<img width="1440" alt="Screenshot 2024-06-20 at 12 24 54 AM" src="https://github.com/RiderCogswell/tiktok/assets/171297114/0df8b56b-f2f5-4e4d-96c7-8557c8be1547">
+
+
 ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)

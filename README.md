@@ -28,5 +28,5 @@ This project is licensed under the MIT License
 For more information click -> [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Questions
-[GitHub](https://github.com/RiderCogswell)  
+[GitHub](https://github.com/RiderCogswell)   
 [Email Me!](mailto:ridercogswell@gmail.com) 

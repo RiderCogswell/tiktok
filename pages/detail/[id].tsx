@@ -60,7 +60,7 @@ const Detail = ({ postDetails } : IProps) => {
     }
   }
   
-  const addComment = async (e: { preventDefault(): () => void }) => {
+  const addComment = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (userProfile && comment) { 

@@ -11,8 +11,8 @@ interface IProps {
   isPosting: boolean;
   comment: string;
   setComment: Dispatch<SetStateAction<string>>;
-  addComment: any;
-  comments: any;
+  addComment: () => void;
+  comments: IComment[];
 }
 
 interface IComment {
@@ -29,7 +29,7 @@ const Comments = ({comment, setComment, addComment, isPosting, comments }: IProp
     <div className='border-r-2 border-gray-200 pt-4 px-10 bg-[#f8f8f8] border-b-2 lg:pb-0 pb-[100px]'>
       <div className='overflow-scroll lg:h-[475px]'>
         {comments?.length ? (
-          comments.map((comment: { postedBy: { _id: any; _ref: any }; comment: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined }, idx: React.Key | null | undefined) => (
+          comments.map((comment, idx) => (
             <>
               {allUsers.map((user: User) => (
                 user._id === (comment.postedBy._id || comment.postedBy._ref) && (

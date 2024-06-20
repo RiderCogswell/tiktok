@@ -15,23 +15,23 @@ export const Sidebar = () => {
   const userProfile = false;
 
   const normalLink = 'flex items-center gap-3 hover:bg-primary hover:bg-opacity-50 active:bg-opacity-100 p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#FE2C55] rounded'
-  
+
   return (
     <div>
         <div className='xl:w-400 w-20 flex flex-col justify-start mb-10 border-r border-gray-100 xl:border-0 p-3'>
           <div className='xl:border-b-0 border-gray-200 '>
             <Link href='/'>
-              <div className={normalLink}>
+              <a className={normalLink}>
                 <p className='text-2xl'>
                   <AiFillHome />
                 </p>
                 <span className='text-xl hidden xl:block'>
                   For You
                 </span>
-              </div>
+              </a>
             </Link>
           </div>
-          
+
           <Discover />
           <SuggestedAccounts />
           <Footer />

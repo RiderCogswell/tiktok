@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import Head from 'next/head';
 import Image from 'next/image'
 import { GoVerified } from 'react-icons/go'
 import { MdOutlineCancel } from 'react-icons/md'
@@ -59,11 +60,11 @@ const Detail = ({ postDetails } : IProps) => {
       setPost({ ...post, likes: data.likes }) // leave rest of post, update likes
     }
   }
-  
+
   const addComment = async (e: { preventDefault(): () => void }) => {
     e.preventDefault();
-    
-    if (userProfile && comment) { 
+
+    if (userProfile && comment) {
       setIsPosting(true)
       const { data } = await axios.put(`${BASE_URL}/api/post/${post._id}`, {
         userId: userProfile._id,
@@ -77,16 +78,20 @@ const Detail = ({ postDetails } : IProps) => {
   }
 
   return (
-    <div className='flex w-full absolute left-0 top-0 bg-white flex-wrap lg:flex-nowrap'>
+    <>
+      <Head>
+        <title>TikTok Detail</title>
+      </Head>
+      <div className='flex w-full absolute left-0 top-0 bg-white flex-wrap lg:flex-nowrap'>
       <div className='relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-blurred-img bg-no-repeat bg-cover bg-center'>
         <div className='absolute top-6 left-2 lg:left-6 flex gap-6 z-50'>
-          <p className='cursor-pointer' onClick={() => router.back()}> 
+          <p className='cursor-pointer' onClick={() => router.back()}>
             <MdOutlineCancel className='text-white text-[35px]' />
           </p>
         </div>
         <div className='relative'>
           <div className='lg:h-[100vh] h-[60vh]'>
-            <video 
+            <video
               ref={videoRef}
               loop
               onClick={onVideoClick}
@@ -127,8 +132,8 @@ const Detail = ({ postDetails } : IProps) => {
           <div className='flex gap-3 p-2 cursor-pointer font-semibold rounded'>
             <div className='md:w-20 md:h-20 w-16 h-16 ml-4'>
               <Link href='/'>
-                <>
-                  <Image 
+                <a>
+                  <Image
                     width={62}
                     height={62}
                     className='rounded-full'
@@ -136,31 +141,31 @@ const Detail = ({ postDetails } : IProps) => {
                     alt='profile photo'
                     layout='responsive'
                   />
-                </>
+                </a>
               </Link>
             </div>
             <div>
               <Link href='/'>
-                <div className='flex flex-col mt-3 gap-2'>
+                <a className='flex flex-col mt-3 gap-2'>
                   <p className='flex items-center gap-2 md:text-md font-bold text-primary'>
                     {post.postedBy.userName} {`
                     `}
-                    <GoVerified 
+                    <GoVerified
                     className='text-blue-400 text-md'/>
                   </p>
                   <p className='capitalize font-medium text-xs text-gray-500 hidden md:block'>
                     {post.postedBy.userName}
                   </p>
-                </div>
+                </a>
               </Link>
             </div>
           </div>
-          
+
           <p className='px-10 text-lg text-gray-600 '>{post.caption}</p>
 
           <div>
             {userProfile && (
-              <LikeButton 
+              <LikeButton
                 likes={post.likes}
                 handleLike={() => handleLike(true)}
                 handleDislike={() => handleLike(false)}
@@ -168,7 +173,7 @@ const Detail = ({ postDetails } : IProps) => {
             )}
           </div>
 
-          <Comments 
+          <Comments
             comment={comment}
             setComment={setComment}
             addComment={addComment}
@@ -178,6 +183,7 @@ const Detail = ({ postDetails } : IProps) => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

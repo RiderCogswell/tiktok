@@ -1,9 +1,15 @@
 import React from 'react'
+import Head from 'next/head';
 
 const Profile = () => {
   return (
-    <div>Profile</div>
+    <>
+      <Head>
+        <title>TikTok Profile</title>
+      </Head>
+      <div>Profile</div>
+    </>
   )
 }
 
-export default Profile           
+export default Profile

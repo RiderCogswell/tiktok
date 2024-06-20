@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router';
 import { FaCloudUploadAlt } from 'react-icons/fa';
@@ -69,6 +70,10 @@ const Upload = () => {
   }
 
   return (
+    <>
+      <Head>
+        <title>TikTok Upload</title>
+      </Head>
     <div className='flex h-full w-full absolute left-0 top-[60px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center'>
       <div className='bg-white rounded-lg xl:h-[80vh] w-[60%] flex gap-6 flex-wrap justify-center items-center p-14 pt-6'>
         <div>
@@ -83,9 +88,9 @@ const Upload = () => {
               <div>
                 {videoAsset ? (
                   <div>
-                    <video 
+                    <video
                       src={videoAsset.url}
-                      loop 
+                      loop
                       controls
                       className='rounded-xl h-[450px] w-[400px] bg-black'
                     >
@@ -111,8 +116,8 @@ const Upload = () => {
                         Select file
                       </p>
                     </div>
-                    <input 
-                      type="file" 
+                    <input
+                      type="file"
                       name='upload-video'
                       onChange={uploadVideo}
                       className='w-0 h-0'
@@ -133,22 +138,22 @@ const Upload = () => {
             <label className='text-md font-medium'>
               Caption
             </label>
-            <input 
-              type="text" 
+            <input
+              type="text"
               value={caption}
-              onChange={(e) => setCaption(e.target.value)} 
+              onChange={(e) => setCaption(e.target.value)}
               className='border-2 border-gray-200 rounded p-2 outline-none text-md'
               placeholder='Add a caption...'
             />
             <label className='text-md font-medium'>Choose a Category</label>
-            <select 
+            <select
               onChange={(e) => setCategory(e.target.value)}
               className='outline-none border-2 border-gray-200 text-md capitalize lg:p-4 p-2 rounded cursor-pointer'
               placeholder='Choose a category'
             >
               {topics.map((topic) => (
-                <option 
-                  key={topic.name} 
+                <option
+                  key={topic.name}
                   className='text-md outline-none capitalize bg-white text-gray-700 text-md p-2 hover:bg-slate-300'
                   value={topic.name}
                 >
@@ -157,14 +162,14 @@ const Upload = () => {
               ))}
             </select>
             <div className='flex gap-6 mt-10'>
-              <button 
+              <button
                 onClick={() => {}}
                 type='button'
                 className='border-gray-200 border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none hover:bg-primary hover:bg-opacity-25 active:bg-opacity-100'
               >
                 Discard
               </button>
-              <button 
+              <button
                 onClick={handlePost}
                 type='button'
                 className='bg-[#FE2C55] active:bg-[#fe2c56d4] border-2 text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
@@ -175,6 +180,7 @@ const Upload = () => {
           </div>
       </div>
     </div>
+    </>
   )
 }
 

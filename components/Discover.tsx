@@ -14,20 +14,20 @@ const Discover = () => {
 
   return (
     <div className='xl:border-b-2 xl:border-gray-200 pb-6'>
-      <p className='text-gray-500 font-semibold m-3 mt-4 hidden xl:block'> 
+      <p className='text-gray-500 font-semibold m-3 mt-4 hidden xl:block'>
         Popular Topics
-      </p> 
+      </p>
       <div className='gap-3'>
         {topics.map((topic) => (
           <Link href={`/?topic=${topic.name}`} key={topic.name}>
-            <div className={ query.topic === topic.name ? activeTopicStyle : topicStyle}>
+            <a className={ query.topic === topic.name ? activeTopicStyle : topicStyle}>
               <span className='font-bold text-3xl'>
                 {topic.icon}
               </span>
               <span className='hidden xl:block capitalize text-md font-bold'>
                 {topic.name}
               </span>
-            </div>
+            </a>
           </Link>
         ))}
       </div>

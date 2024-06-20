@@ -19,9 +19,9 @@ const SuggestedAccounts = () => {
       <div>
         {allUsers.slice(0, 5).map((user: User) => (
           <Link href={`/profile/${user._id}`} key={user._id}>
-            <div className='flex gap-3 hover:bg-primary hover:bg-opacity-50 active:bg-opacity-100 p-2 cursor-pointer font-semibold rounded'>
+            <a className='flex gap-3 hover:bg-primary hover:bg-opacity-50 active:bg-opacity-100 p-2 cursor-pointer font-semibold rounded'>
               <div className='w-8 h-8'>
-                <Image 
+                <Image
                   src={user.image}
                   width={34}
                   height={34}
@@ -37,7 +37,7 @@ const SuggestedAccounts = () => {
                 </p>
                 <p className='text-gray-400 capitalize text-xs'>{user.userName}</p>
               </div>
-            </div>
+            </a>
           </Link>
         ))}
       </div>

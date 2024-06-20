@@ -23,7 +23,7 @@ export const Navbar = () => {
 
   const handleSearch = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    
+
     if(searchValue) {
       router.push(`/search/${searchValue}`);
     }
@@ -32,13 +32,13 @@ export const Navbar = () => {
   return (
     <div className='w-full flex justify-between items-center border-b border-gray-200 py-2 px-4'>
       <Link href='/'>
-        <div className='w-[100px] md:w-[130px]'>
+        <a className='w-[100px] md:w-[130px]'>
           <Image
             className='cursor-pointer'
             src={Logo}
             alt='Tiktok'
           />
-        </div>
+        </a>
       </Link>
 
       <div className='relative hidden md:block'>
@@ -72,15 +72,15 @@ export const Navbar = () => {
             </Link>
             {userProfile?.image && (
               <Link href='/'>
-                <>
-                  <Image 
+                <a>
+                  <Image
                     width={40}
                     height={40}
                     className='rounded-full'
                     src={userProfile?.image}
                     alt='profile photo'
                   />
-                </>
+                </a>
               </Link>
             )}
             <button type='button' className='px-2' onClick={() => {
@@ -91,7 +91,7 @@ export const Navbar = () => {
             </button>
           </div>
         ) : (
-          <GoogleLogin 
+          <GoogleLogin
             onSuccess={(response) => createOrGetUser(response, addUser)}
             onError={() => console.log('error')}
           />

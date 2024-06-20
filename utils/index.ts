@@ -21,5 +21,5 @@ export const createOrGetUser = async (response: any, addUser: any) => {
 };
 
 function logEnvVariable(){
-  console.log(process.env)
+  console.log(process.env.)
 }

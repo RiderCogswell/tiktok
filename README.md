@@ -1,4 +1,4 @@
-# TikTok for Shmucks
+# TikTok Clone
 
 ## Description
 Professional TikTok clone built with Next.js, React, Sanity.io, TypeScript, and Tailwind! Login to like, post, or comment on videos and have a grteat time!!
@@ -19,7 +19,12 @@ UPDATE: Will be replacing Sanity backend with Flask - ([Python](https://docs.pyt
 [For help with Sanity, visit the documentation here!](https://www.sanity.io/docs/overview-introduction) 
 
 ## Usage
-In order to test out the application, clone this starter code into your code editor, open your terminal/command line, and from the root of the application run "npm run dev", follow the prompts, and enjoy! Or if you just want a little taste, click [here]() to visit the deployed application!
+In order to test out the application:
+  - Clone this starter code into your code editor 
+  - Open your terminal/command line 
+  - From the root of the application run "npm run dev"
+  - Follow the prompts, and enjoy!
+  - Or if you just want a little taste, click [here](https://tiktok-fhkn-b63m18szp-ridercogswells-projects.vercel.app) to visit the deployed application!😉
 
 ## Contributors
 * [Rider Cogswell](https://github.com/RiderCogswell)

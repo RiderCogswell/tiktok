@@ -2,7 +2,6 @@ import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 
 export const BASE_URL = "";
-logEnvVariable()
 export const createOrGetUser = async (response: any, addUser: any) => {
   const decoded: { name: string, picture: string, sub: string } = jwtDecode(response.credential);
 
@@ -20,6 +19,3 @@ export const createOrGetUser = async (response: any, addUser: any) => {
   await axios.post(`${BASE_URL}/api/auth`, user);
 };
 
-function logEnvVariable(){
-  console.log(process.env.)
-}

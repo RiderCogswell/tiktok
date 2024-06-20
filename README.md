@@ -29,4 +29,4 @@ For more information click -> [![License: MIT](https://img.shields.io/badge/Lice
 
 ## Questions
 [GitHub](https://github.com/RiderCogswell)  
-[Email Me!](mailto:ridercogswell@gmail.com)
+[Email Me!](mailto:ridercogswell@gmail.com) 
